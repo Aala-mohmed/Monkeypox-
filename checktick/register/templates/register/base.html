@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Monkeypox Virus</title>
+    <link rel="shortcut icon" type="image/png" href="{%static 'register/images/logo.jpg' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'register/csscss/web.css' %}">
+    <link rel="stylesheet" href="{% static 'register/csscss/all.css' %}">
+
+
+
+
+
+
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top " style="opacity:0.8">
+            <div class="container-fluid">
+
+                <a class="navbar-brand text-light" href="#" style="border-right:1px solid #ecf0f3; padding-right: 10px; font-weight: bold;">
+                    <input type="image" src="{% static 'predict/images/Family logo template (6).png' %}" height="60px" width="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="{% url 'check' %}">Check</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="{% url 'about' %}">About</a>
+                        </li>
+                    </ul>
+                   
+                    <span class="hello-msg"> Hellow,    {{ request.user}} </span>
+                    <span>  <br />   </span>
+                    <span> <a class=" btn hello-msg" href="{% url 'logout' %}"> Logout</a></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+    {% block content%}
+
+    {% endblock %}
